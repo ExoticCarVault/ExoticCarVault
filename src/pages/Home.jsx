@@ -1,7 +1,6 @@
 
 
 import Banner from '../components/banner/Banner'
-import { Carousel } from '../components/Carousel'
 import { Hero } from '../components/Hero'
 
 
