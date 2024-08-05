@@ -4,13 +4,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+:root{
+  --color-golden: #BDAD87;
+  --color-cream: #F7F0D4;
+  --color-blue: #011724;
+}
 
-:root {
+body{
+  background-color: #011724;
+}
+
+* {
+  --color-amaerla: ;
   font-family: "Marcellus", serif;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #011724;
+
   font-weight: 400;
   font-style: normal;
 }
 
+
+.material-symbols-outlined {
+  font-size: 1.2em;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 24
+}
 
