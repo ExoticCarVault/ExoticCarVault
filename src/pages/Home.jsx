@@ -1,6 +1,5 @@
 
 
-import Banner from '../components/banner/Banner'
 import { Hero } from '../components/Hero'
 
 
@@ -12,7 +11,6 @@ function Home() {
     <div>
       <Header />
       <Hero/>
-      <Banner />
     </div>
   
   )

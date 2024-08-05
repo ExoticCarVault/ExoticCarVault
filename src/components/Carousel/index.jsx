@@ -5,6 +5,7 @@ import video3 from '../../assets/Hero/lamborghini.mp4'
 export const Carousel = () => {
     const data = [
         {
+            id: 0,
             category: `Sport`,
             video: video1,
             name: `Porshe`,
@@ -15,6 +16,7 @@ export const Carousel = () => {
             acceleration: `3.4s`
         },
         {
+            id: 1,
             category: `Suv`,
             video: video2,
             name: `Ferrari`,
@@ -25,6 +27,7 @@ export const Carousel = () => {
             acceleration: `3.4s`
         },
         {
+            id: 2,
             category: `Sport`,
             video: video3,
             name: `Lamborghini`,
@@ -41,7 +44,7 @@ export const Carousel = () => {
         <div className='w-full h-full'>
 
                 {data.map((d ) => (
-                        <div className='relative flex flex-row gap-5'>
+                        <div key={d.id} className='relative flex flex-row gap-5'>
                             <video src={d.video} autoPlay loop muted className='w-full h-full object-cover object-center'></video>
                             <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%] from-[#000000e6] to-transparent'>
                                 <div className='flex flex-col justify-between items-center gap-10'>
