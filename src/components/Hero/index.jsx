@@ -18,6 +18,7 @@ export const Hero = () => {
 
     const data = [
         {
+            id: 0,
             category: `Sport`,
             video: video1,
             name: `Porshe`,
@@ -28,6 +29,7 @@ export const Hero = () => {
             acceleration: `3.4s`
         },
         {
+            id: 1,
             category: `Suv`,
             video: video2,
             name: `Ferrari`,
@@ -38,6 +40,7 @@ export const Hero = () => {
             acceleration: `3.4s`
         },
         {
+            id: 2,
             category: `Sport`,
             video: video3,
             name: `Lamborghini`,
@@ -56,13 +59,13 @@ export const Hero = () => {
         <div className='w-[90%] m-auto h-full'>
          <Slider {...settings}>
          {data.map((d ) => (
-                        <div className='relative flex flex-row gap-5'>
+                        <div key={d.id} className='relative flex flex-row gap-5'>
                             <video src={d.video} autoPlay loop muted className='w-full h-full object-cover object-center'></video>
                             <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent'>
                                 <div className='flex flex-col justify-between items-center gap-10'>
                                     <div className='flex flex-col'>
                                         <h4 className='text-sm text-[#b5a47e] p-1 md:text-xl'>{d.category}</h4>
-                                        <h1 className='text-xl md:text-3xl'>{d.name}<span className='text-red-500 text-lg font-bold md:text-2xl'>{d.model}</span></h1>
+                                        <h1 key={d.id} className='text-xl md:text-3xl'>{d.name}<span className='text-red-500 text-lg font-bold md:text-2xl'>{d.model}</span></h1>
                                         <div className='flex items-center gap-3 p-3 text-[0.8rem] md:text-xl'>
                                         <p className='flex flex-col items-center gap-3'>
                                             <span className='p-1 border-2 rounded-full'><PiEngineFill /></span>

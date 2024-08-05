@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './pages/Home.jsx'
 import './style/index.css'
-import { Hero } from './components/Hero/index.jsx'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,6 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Home />
    
 
-  
   </React.StrictMode>,
 )
