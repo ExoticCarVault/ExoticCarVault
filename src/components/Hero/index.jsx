@@ -59,9 +59,9 @@ export const Hero = () => {
         <div className='w-[90%] m-auto h-full'>
          <Slider {...settings}>
          {data.map((d ) => (
-                        <div key={d.id} className='relative flex flex-row gap-5'>
+                        <div key={d.id} className='mt-5 h-52 relative flex flex-row gap-5 lg:h-full'>
                             <video src={d.video} autoPlay loop muted className='w-full h-full object-cover object-center'></video>
-                            <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent'>
+                            <div className='absolute  w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent'>
                                 <div className='flex flex-col justify-between items-center gap-10'>
                                     <div className='flex flex-col'>
                                         <h4 className='text-sm text-[#b5a47e] p-1 md:text-xl'>{d.category}</h4>
