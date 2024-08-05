@@ -6,7 +6,7 @@ function Header (){
     return (
         <>
         <div className="w-full ">
-            <header className='flex place-content-around mt-5	'>
+            <header className='flex place-content-around mt-5'>
                 <button type="button" id="menu">
                     <img src={menu} alt="Menu do site" />
                 </button>
