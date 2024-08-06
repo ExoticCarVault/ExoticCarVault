@@ -53,25 +53,25 @@ function Header (){
                 </nav>
   
                 {menuOpen && (
-                    <ul id='menu' className='w-[60%] h-[100%] rounded-tr-3xl rounded-ee-3xl opacity-100 top-0.5 flex flex-col bg-[#010E16] absolute z-10  md:hidden z-1'>
+                    <ul id='menu' className='w-[30%] h-[100%] rounded-tr-3xl rounded-ee-3xl opacity-100 top-0.5 flex flex-col bg-[#010E16] absolute z-10  md:hidden z-1'>
                     <div className='flex place-content-start mt-5 ml-4'>
                         <button className='md:hidden' type="button" id="menuBtn" onClick={toggleMenu}>
                                 {/* <img src={menuIcon} alt="Menu do site" /> */}
                                 <span className="material-symbols-outlined">close</span>
                         </button>
                     </div>
-                    <div className='flex text-left items-center flex-col mt-20 space-y-28'>
+                    <div className='flex text-left items-center flex-col mt-20 space-y-20'>
                         <a href="#" className='flex flex-col text-center items-center'>
-                            <img src={keys} alt="" className='w-20' />
-                            <li>Serviços</li>
+                            <img src={keys} alt="" className='w-10' />
+                            <li className='text-sm		'>Serviços</li>
                         </a>
                         <a href="#"  className='flex flex-col text-center items-center' >
-                            <img src={garage} alt=""  className='w-20'/>
-                            <li>Garagem Completa</li>
+                            <img src={garage} alt=""  className='w-10'/>
+                            <li className='text-sm		'>Garagem <br />Completa</li>
                         </a>
-                        <a href="#"  className='flex flex-col text-center items-center'>
-                            <img src={star} alt=""  className='w-20'/>
-                            <li>Lista de Desejo</li>
+                        <a href="#"  className='flex flex-col flex-wrap text-center items-center'>
+                            <img src={star} alt=""  className='w-10'/>
+                            <li className='flex text-sm	 '>Lista de  <br /> Desejo</li>
                         </a>
                     </div>
                 </ul>
