@@ -1,8 +1,5 @@
 
-
 import { Hero } from '../components/Hero'
-
-
 import Header from '../components/NavBar/Header'
 
 function Home() {
