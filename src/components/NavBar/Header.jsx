@@ -1,5 +1,5 @@
 import menuIcon from '../../assets/header/menu.svg';
-import logo from '../../assets/header/logo-ecv.svg';
+import logo from '../../assets/header/ecv-logo.png';
 import login from '../../assets/header/login.svg';
 import star from '../../assets/header/star.svg';
 import garage from '../../assets/header/garage.svg';
@@ -17,7 +17,7 @@ function Header (){
 
     return (
         <>
-        <div className="w-full ">
+        <div className="w-full top-0 fixed z-50 shadow-xl ">
             <header className='flex flex-col  place-content-around mt-5'>
                 <nav  className='flex w-full place-content-around'>
     
@@ -26,7 +26,7 @@ function Header (){
 
                     </button>
 
-                    <img src={logo} alt="Logo do site" />
+                    <img src={logo} alt="Logo do site" className='w-[4rem]' />
 
                     <div className='hidden md:flex w-50 text-center items-center  '>
                         <ul className='flex'>
@@ -60,7 +60,7 @@ function Header (){
                                 <span className="material-symbols-outlined">close</span>
                         </button>
                     </div>
-                    <div className='flex text-left items-center flex-col mt-20 space-y-20'>
+                    <div className='flex text-left items-center flex-col  space-y-20  bg-[#010E16] h-screen p-10 rounded-br-3xl'>
                         <a href="#" className='flex flex-col text-center items-center'>
                             <img src={keys} alt="" className='w-10' />
                             <li className='text-sm		'>Serviços</li>

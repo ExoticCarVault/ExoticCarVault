@@ -54,7 +54,7 @@ export const Hero = () => {
     ]
 
     return(
-        <div className='w-full h-full'>
+        <div className='w-full min-h-screen top-0 '>
             <Swiper
                 slidesPerView={1}
                 pagination={{ clickable: true}}
@@ -64,13 +64,13 @@ export const Hero = () => {
             {data.map((d ) => (
                 <SwiperSlide key={d.id}>                
                     <div className='relative flex flex-row gap-5 '>
-                        <video src={d.video} autoPlay loop muted className='w-full h-full object-cover object-center'></video>
-                        <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent'>
-                            <div className='flex flex-col justify-between items-center gap-10'>
-                                <div className='flex flex-col items-center justify-center'>
+                        <video src={d.video} autoPlay loop muted className='w-full h-screen object-cover object-center'></video>
+                        <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent '>
+                            <div className='flex flex-col justify-center items-center gap-20 m-auto md:m-1 py-5 px-10'>
+                                <div className='flex flex-col items-center justify-center m-auto gap-10'>
                                     <div>
                                     <h4 className='text-sm text-[#b5a47e] p-1 md:text-xl'>{d.category}</h4>
-                                    <h1 className='text-xl md:text-5xl'>{d.name}<span className='text-red-500 text-lg font-bold md:text-2xl'>{d.model}</span></h1>
+                                    <h1 className='text-2xl md:text-5xl'>{d.name}<span className='text-red-500 text-lg font-bold md:text-2xl'>{d.model}</span></h1>
                                     </div>
                                     <div className='flex items-center gap-4 p-2 text-[0.8rem] md:text-xl md:flex-col md:items-start md:gap-5'>
                                         <p className='flex flex-col items-center gap-3 md:flex-row'>

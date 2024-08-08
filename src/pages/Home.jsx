@@ -5,7 +5,7 @@ import Header from '../components/NavBar/Header'
 function Home() {
 
   return (
-    <div>
+    <div className='h-[500vh]'>
       <Header />
       <Hero/>
     </div>
