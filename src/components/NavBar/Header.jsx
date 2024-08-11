@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react';
-import { FaCartShopping, FaRegCircleUser, FaBars, FaScrewdriverWrench, FaWarehouse } from "react-icons/fa6";
-import { BsCart3 } from "react-icons/bs";
-import menuIcon from '../../assets/header/menu.svg';
+import { FaX, FaRegCircleUser, FaBars, FaScrewdriverWrench, FaWarehouse } from "react-icons/fa6";
 import logo from '../../assets/header/ecv-logo.png';
-import login from '../../assets/header/login.svg';
-import star from '../../assets/header/star.svg';
-import garage from '../../assets/header/garage.svg';
-import keys from '../../assets/header/keys.svg';
+
+import { CartWidget } from '../Container/CartWidget';
 
 
 function Header() {
@@ -62,7 +58,7 @@ function Header() {
                                 <p className='hidden md:flex items-center'>Login</p>
                             </button>
                             <button className='hidden md:flex items-center' type="button">
-                                < FaCartShopping className='text-4xl text-[#b5a47e] mr-3' />
+                                <div className='mr-3'><CartWidget /></div>
                                 <p className='items-center'>Carrinho</p>
                             </button>
                         </div>
@@ -71,11 +67,11 @@ function Header() {
                     {menuOpen && (
                         <ul className={`w-[30%] h-screen rounded-tr-3xl rounded-ee-3xl bg-[#010E16] absolute top-0 left-0 transform transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} md:hidden`}>
                             <div className='flex place-content-start mt-5 ml-4'>
-                                <button className='md:hidden' type="button" onClick={toggleMenu}>
-                                    <span className="material-symbols-outlined">close</span>
+                                <button className='md:hidden text-[#b5a47e] text-4xl mt-2 m-auto' type="button" onClick={toggleMenu}>
+                                    <FaX />
                                 </button>
                             </div>
-                            <div className='flex text-left items-center justify-center flex-col space-y-20 bg-[#010E16] h-screen rounded-br-3xl'>
+                            <div className='flex text-left items-center justify-evenly flex-col gap-10 pb-5 bg-[#010E16] h-screen rounded-br-3xl'>
                                 <a href="#" className='flex flex-col text-center items-center'>
                                     <FaScrewdriverWrench className='text-3xl text-[#b5a47e] mb-3'/>
                                     <li className='text-sm'>Serviços</li>
@@ -85,7 +81,7 @@ function Header() {
                                     <li className='text-sm'>Garagem <br />Completa</li>
                                 </a>
                                 <a href="#" className='flex flex-col text-center items-center'>
-                                < FaCartShopping className='text-3xl text-[#b5a47e] mb-3' />
+                                    <div className='mb-3'><CartWidget /></div>
                                     <li className='text-sm'>Carrinho</li>
                                 </a>
                             </div>
