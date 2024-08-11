@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
+import { FaCartShopping, FaRegCircleUser, FaBars, FaScrewdriverWrench, FaWarehouse } from "react-icons/fa6";
+import { BsCart3 } from "react-icons/bs";
 import menuIcon from '../../assets/header/menu.svg';
 import logo from '../../assets/header/ecv-logo.png';
 import login from '../../assets/header/login.svg';
 import star from '../../assets/header/star.svg';
 import garage from '../../assets/header/garage.svg';
 import keys from '../../assets/header/keys.svg';
+
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -32,22 +35,22 @@ function Header() {
 
     return (
         <>
-            <div className={`w-full top-0 fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#011724]' : 'bg-transparent'}`}>
-                <header className='flex flex-col place-content-around mt-5'>
+            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#011724]' : 'bg-transparent'}`}>
+                <header className='flex flex-col place-content-around p-3'>
                     <nav className='flex w-full place-content-around'>
                         <button className='md:hidden' type="button" onClick={toggleMenu}>
-                            <img src={menuIcon} alt="Menu do site" />
+                            <FaBars className='text-4xl text-[#b5a47e]' />
                         </button>
 
                         <img src={logo} alt="Logo do site" className='w-[4rem]' />
 
                         <div className='hidden md:flex w-50 text-center items-center'>
                             <ul className='flex'>
-                                <a href="#" className='hover:bg-gray-700 p-1 rounded-md'>
+                                <a href="#" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
                                     <li className='text-base'>Garagem completa</li>
                                 </a>
                                 <span className='mr-3 ml-3'>-</span>
-                                <a href="#" className='hover:bg-gray-700 p-1 rounded-md'>
+                                <a href="#" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
                                     <li className='text-base'>Serviços</li>
                                 </a>
                             </ul>
@@ -55,12 +58,12 @@ function Header() {
 
                         <div className='flex'>
                             <button className='flex items-center md:mr-7' type="button">
-                                <img className='md:mr-4' src={login} alt="Login do site" />
+                                <FaRegCircleUser className='text-4xl mr-3 text-[#b5a47e]' />
                                 <p className='hidden md:flex items-center'>Login</p>
                             </button>
                             <button className='hidden md:flex items-center' type="button">
-                                <img className='mr-1' src={star} alt="Lista de desejo" />
-                                <p className='items-center'>Lista de Desejo</p>
+                                < FaCartShopping className='text-4xl text-[#b5a47e] mr-3' />
+                                <p className='items-center'>Carrinho</p>
                             </button>
                         </div>
                     </nav>
@@ -72,18 +75,18 @@ function Header() {
                                     <span className="material-symbols-outlined">close</span>
                                 </button>
                             </div>
-                            <div className='flex text-left items-center flex-col space-y-20 bg-[#010E16] h-screen p-10 rounded-br-3xl'>
+                            <div className='flex text-left items-center justify-center flex-col space-y-20 bg-[#010E16] h-screen rounded-br-3xl'>
                                 <a href="#" className='flex flex-col text-center items-center'>
-                                    <img src={keys} alt="" className='w-10' />
+                                    <FaScrewdriverWrench className='text-3xl text-[#b5a47e] mb-3'/>
                                     <li className='text-sm'>Serviços</li>
                                 </a>
                                 <a href="#" className='flex flex-col text-center items-center'>
-                                    <img src={garage} alt="" className='w-10'/>
+                                    <FaWarehouse className='text-3xl text-[#b5a47e] mb-3'/>
                                     <li className='text-sm'>Garagem <br />Completa</li>
                                 </a>
                                 <a href="#" className='flex flex-col text-center items-center'>
-                                    <img src={star} alt="" className='w-10'/>
-                                    <li className='text-sm'>Lista de <br /> Desejo</li>
+                                < FaCartShopping className='text-3xl text-[#b5a47e] mb-3' />
+                                    <li className='text-sm'>Carrinho</li>
                                 </a>
                             </div>
                         </ul>
