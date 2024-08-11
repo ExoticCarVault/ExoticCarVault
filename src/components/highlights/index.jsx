@@ -1,9 +1,9 @@
-import mclaren from '../../assets/banner/mc.png'
+import ferrari from '../../assets/banner/ferrari-black.jpg'
 
 export const Destaques = () => {
     return (
         <>
-            <div className="flex w-full mt-5 flex-col lg:flex-row min-h-full">
+            <div className="flex w-full mt-5 flex-col lg:flex-row min-h-full  shadow-lg">
                 <div className="w-full lg:w-1/2 h-[400px] flex flex-col justify-center items-center bg-gradient-to-br from-gray-500 via-[#b5a47e] to-gray-500 p-10">
                     <h1 className="text-[0.8rem] font-bold py-3 uppercase">Dirija o Excepcional, Viva o Exclusivo</h1>
                     <p className='font-sans text-[0.8rem] font-bold'>
@@ -11,7 +11,7 @@ export const Destaques = () => {
                     </p>
                 </div>
                 <div className="flex w-full lg:w-1/2 md:h-[400px]">
-                    <img src="https://www.classicdriver.com/sites/default/files/styles/article_full/public/article_images/vegashypercars5.jpg" className=" h-full w-full object-cover"></img>
+                    <img src={ferrari} className=" h-full w-full object-cover"></img>
                 </div>
             </div>
         </>
