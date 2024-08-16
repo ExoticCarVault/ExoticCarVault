@@ -31,22 +31,22 @@ function Header() {
 
     return (
         <>
-            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#011724]' : 'bg-transparent'}`}>
+            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#011724]' : 'bg-transparent'}  text-white`}>
                 <header className='flex flex-col place-content-around p-3'>
                     <nav className='flex w-full place-content-around'>
                         <button className='md:hidden' type="button" onClick={toggleMenu}>
                             <FaBars className='text-4xl text-[#b5a47e]' />
                         </button>
 
-                        <img src={logo} alt="Logo do site" className='w-[4rem]' />
+                        <a href="/"><img src={logo} alt="Logo do site" className='w-[4rem]' /></a>
 
                         <div className='hidden md:flex w-50 text-center items-center'>
                             <ul className='flex'>
-                                <a href="#" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
+                                <a href="/garage" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
                                     <li className='text-base'>Garagem completa</li>
                                 </a>
                                 <span className='mr-3 ml-3'>-</span>
-                                <a href="#" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
+                                <a href="/services" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
                                     <li className='text-base'>Serviços</li>
                                 </a>
                             </ul>
