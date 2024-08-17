@@ -1,20 +1,14 @@
-import { Route, Routes } from "react-router-dom"
-import Header from "./components/NavBar/Header"
-import Home from "./routes/pages/Home"
-import { Garage } from "./routes/pages/Garage"
-import {Services} from "./routes/pages/Services"
+import {Header} from "./components/NavBar/Header"
+import RoutePath from "./routes"
+
 
 
 const App = () => {
   return (
-   <>
+   <div className='h-full overflow-auto text-white'>
     <Header />
-    <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/garage' element={<Garage />} />
-        <Route path='/services' element={<Services />} />
-    </Routes>
-   </>
+    <RoutePath />
+   </div>
   )
 }
 

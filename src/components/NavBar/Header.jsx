@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { FaX, FaRegCircleUser, FaBars, FaScrewdriverWrench, FaWarehouse } from "react-icons/fa6";
 import logo from '../../assets/header/ecv-logo.png';
 
-import { CartWidget } from '../Container/CartWidget';
+import { CartWidget } from '../Cart/CartWidget';
+import { Link } from 'react-router-dom';
 
 
-function Header() {
+export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [navbarScrolled, setNavbarScrolled] = useState(false);
 
@@ -37,30 +38,35 @@ function Header() {
                         <button className='md:hidden' type="button" onClick={toggleMenu}>
                             <FaBars className='text-4xl text-[#b5a47e]' />
                         </button>
-
-                        <a href="/"><img src={logo} alt="Logo do site" className='w-[4rem]' /></a>
-
+                        <Link to='/'>
+                        <img src={logo} alt="Logo do site" className='w-[4rem]' />
+                        </Link>
                         <div className='hidden md:flex w-50 text-center items-center'>
                             <ul className='flex'>
-                                <a href="/garage" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
-                                    <li className='text-base'>Garagem completa</li>
-                                </a>
+                                <Link to='/garage'>
+                                    <li className='text-base hover:bg-[#ffffff30] py-1 px-2 rounded-md'>Garagem completa</li>
+                                </Link>
                                 <span className='mr-3 ml-3'>-</span>
-                                <a href="/services" className='hover:bg-[#ffffff30] py-1 px-2 rounded-md'>
-                                    <li className='text-base'>Serviços</li>
-                                </a>
+                                <Link to='/services'>
+                                <li className='text-base hover:bg-[#ffffff30] py-1 px-2 rounded-md'>Serviços</li>
+                                </Link>                                    
+                                
                             </ul>
                         </div>
 
-                        <div className='flex'>
+                        <div className='flex items-center'>
+                            <Link to='/login'>
                             <button className='flex items-center md:mr-7' type="button">
                                 <FaRegCircleUser className='text-4xl mr-3 text-[#b5a47e]' />
                                 <p className='hidden md:flex items-center'>Login</p>
                             </button>
+                            </Link>
+                            <Link to='cartList'>
                             <button className='hidden md:flex items-center' type="button">
                                 <div className='mr-3'><CartWidget /></div>
                                 <p className='items-center'>Carrinho</p>
                             </button>
+                            </Link>
                         </div>
                     </nav>
 
@@ -72,18 +78,24 @@ function Header() {
                                 </button>
                             </div>
                             <div className='flex text-left items-center justify-evenly flex-col gap-10 pb-5 bg-[#010E16] h-screen rounded-br-3xl'>
-                                <a href="#" className='flex flex-col text-center items-center'>
+                                <Link to='services'>
+                                <button className='flex flex-col text-center items-center'>
                                     <FaScrewdriverWrench className='text-3xl text-[#b5a47e] mb-3'/>
                                     <li className='text-sm'>Serviços</li>
-                                </a>
-                                <a href="#" className='flex flex-col text-center items-center'>
+                                </button>
+                                </Link>
+                                <Link to='garage'>
+                                <button className='flex flex-col text-center items-center'>
                                     <FaWarehouse className='text-3xl text-[#b5a47e] mb-3'/>
                                     <li className='text-sm'>Garagem <br />Completa</li>
-                                </a>
-                                <a href="#" className='flex flex-col text-center items-center'>
+                                </button>
+                                </Link>
+                                <Link to='cartList'>
+                                <button className='flex flex-col text-center items-center'>
                                     <div className='mb-3'><CartWidget /></div>
                                     <li className='text-sm'>Carrinho</li>
-                                </a>
+                                </button>
+                                </Link>
                             </div>
                         </ul>
                     )}
@@ -91,6 +103,5 @@ function Header() {
             </div>
         </>
     );
-}
+};
 
-export default Header;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ItemList from './ItemList';
+import { ItemList } from './ItemList';
 
-const ItemListContainer = () => {
+export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -65,5 +65,3 @@ const ItemListContainer = () => {
         </div>
     );
 };
-
-export default ItemListContainer;

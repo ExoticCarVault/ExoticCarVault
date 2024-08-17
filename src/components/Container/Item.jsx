@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = ({ product }) => {
+export const Item = ({ product }) => {
     return (
         <div className='w-3/4 m-auto'>
             <div className='mt-20'>
@@ -24,5 +24,3 @@ const Item = ({ product }) => {
         </div>
     );
 };
-
-export default Item;

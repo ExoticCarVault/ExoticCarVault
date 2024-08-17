@@ -15,5 +15,5 @@ export const Destaques = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
