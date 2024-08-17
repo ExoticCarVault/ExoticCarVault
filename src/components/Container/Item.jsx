@@ -3,8 +3,8 @@ import React from 'react';
 export const Item = ({ product }) => {
     return (
         <div className='w-3/4 m-auto'>
-            <div className='mt-20'>
-                <div className='bg-white text-black h-[450px] rounded-xl shadow-lg'>
+            <div className='mt-20 shadow-xl'>
+                <div className='bg-white text-black h-[450px] rounded-xl'>
                     <div className='rounded-t-2xl items-center'>
                         <img src={product.img} alt="logo do carro" className='rounded-t-lg w-full h-[200px] md:object-cover object-center' />
                     </div>

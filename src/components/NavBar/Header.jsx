@@ -32,11 +32,11 @@ export const Header = () => {
 
     return (
         <>
-            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#011724]' : 'bg-transparent'}  text-white`}>
+            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#2a2a2a]' : 'bg-transparent'}  text-white`}>
                 <header className='flex flex-col place-content-around p-3'>
                     <nav className='flex w-full place-content-around'>
                         <button className='md:hidden' type="button" onClick={toggleMenu}>
-                            <FaBars className='text-4xl text-[#b5a47e]' />
+                            <FaBars className='text-3xl text-[#b5a47e]' />
                         </button>
                         <Link to='/'>
                         <img src={logo} alt="Logo do site" className='w-[4rem]' />
@@ -57,27 +57,27 @@ export const Header = () => {
                         <div className='flex items-center'>
                             <Link to='/login'>
                             <button className='flex items-center md:mr-7' type="button">
-                                <FaRegCircleUser className='text-4xl mr-3 text-[#b5a47e]' />
-                                <p className='hidden md:flex items-center'>Login</p>
+                                <FaRegCircleUser className='text-3xl mr-3 text-[#b5a47e]' />
+                            
                             </button>
                             </Link>
                             <Link to='cartList'>
                             <button className='hidden md:flex items-center' type="button">
-                                <div className='mr-3'><CartWidget /></div>
-                                <p className='items-center'>Carrinho</p>
+                                <div className=''><CartWidget /></div>
+                               
                             </button>
                             </Link>
                         </div>
                     </nav>
 
                     {menuOpen && (
-                        <ul className={`w-[30%] h-screen rounded-tr-3xl rounded-ee-3xl bg-[#010E16] absolute top-0 left-0 transform transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} md:hidden`}>
+                        <ul className={`w-[30%] h-screen rounded-tr-3xl rounded-ee-3xl bg-[#181818] absolute top-0 left-0 transform transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} md:hidden`}>
                             <div className='flex place-content-start mt-5 ml-4'>
-                                <button className='md:hidden text-[#b5a47e] text-4xl mt-2 m-auto' type="button" onClick={toggleMenu}>
+                                <button className='md:hidden text-[#b5a47e] text-3xl mt-2 m-auto' type="button" onClick={toggleMenu}>
                                     <FaX />
                                 </button>
                             </div>
-                            <div className='flex text-left items-center justify-evenly flex-col gap-10 pb-5 bg-[#010E16] h-screen rounded-br-3xl'>
+                            <div className='flex text-left items-center justify-evenly flex-col gap-10 pb-5 bg-[#181818] h-screen rounded-br-3xl'>
                                 <Link to='services'>
                                 <button className='flex flex-col text-center items-center'>
                                     <FaScrewdriverWrench className='text-3xl text-[#b5a47e] mb-3'/>
