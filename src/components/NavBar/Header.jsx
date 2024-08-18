@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaX, FaRegCircleUser, FaBars, FaScrewdriverWrench, FaWarehouse } from "react-icons/fa6";
 import logo from '../../assets/header/ecv-logo.png';
-
 import { CartWidget } from '../Cart/CartWidget';
 import { Link } from 'react-router-dom';
 
@@ -58,7 +57,7 @@ export const Header = () => {
                             <Link to='/login'>
                             <button className='flex items-center md:mr-7' type="button">
                                 <FaRegCircleUser className='text-3xl mr-3 text-[#b5a47e]' />
-                            
+                                <p className='text-base  hidden md:block'>Login</p>
                             </button>
                             </Link>
                             <Link to='cartList'>

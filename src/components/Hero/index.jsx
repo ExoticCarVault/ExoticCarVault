@@ -65,7 +65,7 @@ export const Hero = () => {
                 <SwiperSlide key={d.id}>                
                     <div className='relative flex flex-row gap-5 '>
                         <video src={d.video} autoPlay loop muted className='w-full h-screen object-cover object-center'></video>
-                        <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r px-[6%]  from-[#000000e6] to-transparent '>
+                        <div className='absolute w-full h-full top-0 flex flex-col justify-center items-start bg-gradient-to-r from-[#000000e6] to-transparent px-[6%] '>
                             <div className='flex flex-col justify-center items-center gap-20 m-auto md:m-1 py-5 px-10'>
                                 <div className='flex flex-col items-center justify-center m-auto gap-10'>
                                     <div>
