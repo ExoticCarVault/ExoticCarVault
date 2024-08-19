@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Item = ({ product }) => {
     return (
@@ -12,15 +13,17 @@ export const Item = ({ product }) => {
                         <p className='text-md font-bold text-[#b5a47e]'>{product.category}</p>
                         <p className='text-xl font-bold'>{product.name}</p>
                         <p className='text-lg font-bold text-red-500'>{product.model}</p>
-                        <button className='text-xl text-white font-semibold px-5 py-1 bg-[#b5a47e] rounded-xl mt-7 mb-6 md:mt-4 md:mb-2'>Detalhes</button>
+                        <Link to={`/item/${product.id}`}>
+                            <button className='text-xl text-white font-semibold px-5 py-1 bg-[#b5a47e] rounded-xl mt-7 mb-6 md:mt-4 md:mb-2'>
+                                Detalhes
+                            </button>
+                        </Link>
                     </div>
                     <div className='flex text-lg items-center justify-center p-2 md:p-1 border-t-2'>
                         <p>Quantidade em estoque: {product.stock}</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

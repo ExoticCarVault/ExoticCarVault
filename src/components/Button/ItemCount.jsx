@@ -35,7 +35,7 @@ import { Link } from "react-router-dom";
                 <button className=" p-2 bg-[#b5a47e] hover:bg-[#c7b181] text-sm rounded-full md:text-xl" onClick={incrementar} ><FaPlus /></button>
                 </div>
             </div>
-            <Link to='/orderDetail'>
+            <Link to>
             <button className="flex justify-center items-center w-[80px] h-6 text-[0.8rem] bg-[#b5a47e] hover:bg-[#c7b181] rounded-md p-1 md:h-10 md:text-xl md:w-[150px] cursor-pointer">
                 <spam>Comprar</spam>
             </button>

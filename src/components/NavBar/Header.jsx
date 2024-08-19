@@ -31,7 +31,7 @@ export const Header = () => {
 
     return (
         <>
-            <div className={`w-full fixed z-50 shadow-xl ${navbarScrolled ? 'bg-[#2a2a2a]' : 'bg-transparent'}  text-white`}>
+            <div className={`w-full fixed z-40 shadow-xl ${navbarScrolled ? 'bg-[#2a2a2a]' : 'bg-transparent'}  text-white`}>
                 <header className='flex flex-col place-content-around p-3'>
                     <nav className='flex w-full place-content-around'>
                         <button className='md:hidden' type="button" onClick={toggleMenu}>

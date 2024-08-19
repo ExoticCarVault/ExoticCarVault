@@ -1,6 +1,4 @@
-import video1 from '../../assets/Hero/porshe.mp4'
-import video2 from '../../assets/Hero/ferrari.mp4'
-import video3 from '../../assets/Hero/lamborghini.mp4'
+
 import { PiEngineFill, PiSpeedometerFill } from "react-icons/pi";
 import { IoPricetags } from "react-icons/io5";
 import { register} from 'swiper/element/bundle'
@@ -11,57 +9,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import ItemCount from '../Button/ItemCount';
+import { heroData } from "../Data";
 
 export const Hero = () => {
-    const data = [
-        {
-            id: 0,
-            category: `Sport`,
-            video: video1,
-            name: `Porshe`,
-            model: ` 718 Cayman GT4 RS`,
-            power: `500cv`,
-            price: `R$ 1.5000,00`,
-            engine: `Boxer`,
-            acceleration: `3.4s`,
-            stock: 2,
-        },
-        {
-            id: 1,
-            category: `Suv`,
-            video: video2,
-            name: `Ferrari`,
-            model: ` Purosangue`,
-            power: `725cv`,
-            price: `R$ 2.0000,00`,
-            engine: `V12`,
-            acceleration: `3.4s`,
-            stock: 8,
-        },
-        {
-            id: 2,
-            category: `Sport`,
-            video: video3,
-            name: `Lamborghini`,
-            model: ` Revuelto`,
-            power: `1101cv`,
-            price: `R$ 6.0000,00`,
-            engine: `V12`,
-            acceleration: `2.5s`,
-            stock: 6,
-        }
-     
-    ]
-
     return(
         <div className='w-full min-h-screen top-0 '>
             <Swiper
                 slidesPerView={1}
                 pagination={{ clickable: true}}
                 navigation
-            
+        
             >
-            {data.map((d ) => (
+            {heroData.map((d ) => (
                 <SwiperSlide key={d.id}>                
                     <div className='relative flex flex-row gap-5 '>
                         <video src={d.video} autoPlay loop muted className='w-full h-screen object-cover object-center'></video>
