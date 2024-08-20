@@ -47,6 +47,7 @@ export const items = [
     {
       id: 0,
       img: `https://s2-autoesporte.glbimg.com/Sz7ebFKAVyRMsjFGEtHJutP90x4=/79x23:1554x946/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/4/c/EVrdJ0QjGHW3jseTY2kg/sf90-leosposito-1-.jpg`,
+      background:`https://www.topgear.com/sites/default/files/cars-car/carousel/2020/07/dsc09285.jpg?w=976&h=549`,
       category: `Sport`,
       name: `Ferrari`,
       model: `Fs90 Stradale`,
@@ -54,11 +55,13 @@ export const items = [
       price: `R$ 4.690.000,00`,
       engine: `V8`,
       acceleration: `2.5s`,
+      year:  2024,
       stock: 6,
     },
     {
       id: 1,
       img: `https://www.razaoautomovel.com/wp-content/uploads/2022/08/McLaren_Artura_0038_925x520_acf_cropped-925x520.jpg.webp`,
+      background:`https://www.carscoops.com/wp-content/uploads/2021/08/McLaren-Monterey-1a-1024x555.jpg`,
       category: `Sport`,
       name: `McLaren`,
       model: `Artura`,
@@ -66,11 +69,13 @@ export const items = [
       price: `R$ 2.307.811,00`,
       engine: `V-6 twin-turbo `,
       acceleration: `3.0s`,
+      year:  2024,
       stock: 4,
     },
     {
       id: 2,
       img: `https://i0.statig.com.br/bancodeimagens/8b/gi/1y/8bgi1yrgyz2ylq2s1ikryudt4.jpg`,
+      background:`https://tm.ibxk.com.br/2017/07/28/28175120531566.jpg?ims=1200xorig`,
       category: `Sport`,
       name: `Bugatti`,
       model: `Chiron`,
@@ -78,6 +83,7 @@ export const items = [
       price: `R$ 50.000.000,00`,
       engine: `W16`,
       acceleration: `2.5s`,
+      year:  2024,
       stock: 1,
     }
   ];
