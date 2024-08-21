@@ -4,44 +4,29 @@ import video3 from '../../assets/Hero/lamborghini.mp4';
 export const heroData = [
   {
     id: 0,
-    category: 'Sport',
+    category: 'Sports Cars ',
     video: video1,
+    text: 'Permaneça com sua essência',
     name: 'Porshe',
     model: '718 Cayman GT4 RS',
-    power: '500cv',
-    price: 'R$ 1.5000,00',
-    engine: 'Boxer',
-    acceleration: '3.4s',
-    stock: 2,
   },
   {
     id: 1,
-    category: 'Suv',
+    category: 'Suv Cars',
     video: video2,
+    text: 'Ligue seu motor.',
     name: 'Ferrari',
     model: 'Purosangue',
-    power: '725cv',
-    price: 'R$ 2.0000,00',
-    engine: 'V12',
-    acceleration: '3.4s',
-    stock: 8,
   },
   {
     id: 2,
-    category: 'Sport',
+    category: 'Sport Cars',
     video: video3,
+    text: 'Mergulhe no que você ama.',
     name: 'Lamborghini',
     model: 'Revuelto',
-    power: '1101cv',
-    price: 'R$ 6.0000,00',
-    engine: 'V12',
-    acceleration: '2.5s',
-    stock: 6,
   }
 ];
-
-
-
 
 export const items = [
     {
@@ -85,5 +70,47 @@ export const items = [
       acceleration: `2.5s`,
       year:  2024,
       stock: 1,
+    },
+    {
+      id: 3,
+      img: `https://i0.statig.com.br/bancodeimagens/8b/gi/1y/8bgi1yrgyz2ylq2s1ikryudt4.jpg`,
+      background:`https://tm.ibxk.com.br/2017/07/28/28175120531566.jpg?ims=1200xorig`,
+      category: 'Sport',
+      name: 'Porshe',
+      model: '718 Cayman GT4 RS',
+      power: '500cv',
+      price: 'R$ 1.5000,00',
+      engine: 'Boxer',
+      acceleration: '3.4s',
+      year:  2024,
+      stock: 2,
+    },
+    {
+      id: 4,
+      img: `https://i0.statig.com.br/bancodeimagens/8b/gi/1y/8bgi1yrgyz2ylq2s1ikryudt4.jpg`,
+      background:`https://tm.ibxk.com.br/2017/07/28/28175120531566.jpg?ims=1200xorig`,
+      category: 'Suv',
+      name: 'Ferrari',
+      model: 'Purosangue',
+      power: '725cv',
+      price: 'R$ 2.0000,00',
+      engine: 'V12',
+      acceleration: '3.4s',
+      year:  2024,
+      stock: 8,
+    },
+    {
+      id: 5,
+      img: `https://i0.statig.com.br/bancodeimagens/8b/gi/1y/8bgi1yrgyz2ylq2s1ikryudt4.jpg`,
+      background:`https://tm.ibxk.com.br/2017/07/28/28175120531566.jpg?ims=1200xorig`,
+      category: 'Sport',
+      name: 'Lamborghini',
+      model: 'Revuelto',
+      power: '1101cv',
+      price: 'R$ 6.0000,00',
+      engine: 'V12',
+      acceleration: '2.5s',
+      year:  2024,
+      stock: 6,
     }
   ];
