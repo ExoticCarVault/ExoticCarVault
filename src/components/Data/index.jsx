@@ -4,7 +4,7 @@ import video3 from '../../assets/Hero/lamborghini.mp4';
 export const heroData = [
   {
     id: 0,
-    category: 'Sports Cars ',
+    category: 'Sport Cars ',
     video: video1,
     text: 'Permaneça com sua essência',
     name: 'Porshe',
