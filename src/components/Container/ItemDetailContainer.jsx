@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { items } from '../Data'; 
 import Logo from '../../assets/header/ecv-logo.png';
+import ItemCount from '../Button/ItemCount';
+import { useCart } from '../../context/CartContext';
 
 export const ItemDetailContainer = () => {
     const { id } = useParams();
     const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(true);
     const [fadeClass, setFadeClass] = useState('opacity-0 scale-95');
+    const {addToCart} = useCart();
+    const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
         // Start the fade-in effect with scale
@@ -31,6 +35,14 @@ export const ItemDetailContainer = () => {
         });
     }, [id]);
 
+    function submit(){
+        console.log("submit")
+        addToCart({
+            ...item,
+            quantity
+        })
+    }
+
     return (
         <div className="relative">
             {loading ? (
@@ -51,7 +63,10 @@ export const ItemDetailContainer = () => {
                     <p><strong>Motor:</strong> {item.engine}</p>
                     <p><strong>Aceleração:</strong> {item.acceleration}</p>
                     <p><strong>Estoque:</strong> {item.stock}</p>
+                    <ItemCount onClick={submit} stock={item.stock} initial={1} />
+                
                 </div>
+                
             ) : (
                 <p className="text-center text-lg">Item não encontrado</p>
             )}
