@@ -8,7 +8,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Swiper, SwiperSlide} from 'swiper/react'
-import ItemCount from '../Button/ItemCount';
 import { heroData } from "../Data";
 
 export const Hero = () => {
@@ -46,7 +45,7 @@ export const Hero = () => {
                                         </p>
                                     </div>
                                     <div>
-                                        <ItemCount stock={d.stock} initial={1} />
+                                        <button>teste</button>
                                     </div>
                                 </div>
                             </div>
