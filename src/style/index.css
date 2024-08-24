@@ -32,3 +32,19 @@ body{
   'opsz' 50
 }
 
+/* CSS para as setas de navegação */
+.swiper-button-prev, .swiper-button-next {
+  color: #ffffff !important;  
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px !important;
+}
+.swiper-pagination-bullet {
+  background-color: #ffffff !important; 
+}
+
+/* Cor da bolinha ativa (slide atual) */
+.swiper-pagination-bullet-active {
+  background-color: #BDAD87 !important; 
+}
