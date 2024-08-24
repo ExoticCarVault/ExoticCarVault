@@ -122,7 +122,7 @@ export const Hero = () => {
                                             {d.model}
                                         </div>
                                         <div>
-                                            <button onClick={() => handlePlayPause(index)} className='p-2 md:p-3 bg-transparent border-2 text-white font-bold rounded-lg hover:border-[#b5a47e] hover:bg-[#ffffff30]' >
+                                            <button onClick={() => handlePlayPause(index)} className='p-2 md:p-3 bg-transparent border-2 text-white font-bold rounded-lg hover:border-[#b5a47e] hover:bg-[#ffffff30] transition-all ease-in duration-300' >
                                                 {isPlaying[index] ? <FaPlay /> : <FaPause /> }
                                             </button>
                                         </div>

@@ -92,7 +92,7 @@ export const Header = () => {
                                 <Link to='cartList'>
                                 <button className='flex flex-col text-center items-center'>
                                     <div className='mb-3'><CartWidget /></div>
-                                    <li className='text-sm'>Carrinho</li>
+                                    <li className='text-sm'>Compras</li>
                                 </button>
                                 </Link>
                             </div>

@@ -13,7 +13,7 @@ export const Item = ({ product }) => {
                         <p className='text-md font-bold text-[#b5a47e]'>{product.category}</p>
                         <p className='text-lg text-white font-bold'>{product.name} {product.model}</p>
                         <Link to={`/item/${product.id}`}>
-                            <button className='text-md text-white border-2 font-semibold px-5 py-2 rounded-2xl hover:border-[#b5a47e] hover:bg-[#ffffff30] mt-10 md:mt-4 md:mb-2'>
+                            <button className='text-md text-white border-2 font-semibold px-5 py-2 rounded-2xl hover:border-[#b5a47e] hover:bg-[#ffffff30] mt-10 md:mt-4 md:mb-2 transition-all ease-in duration-300'>
                                 Detalhes
                             </button>
                         </Link>
