@@ -4,6 +4,7 @@ import { items } from '../Data';
 import Logo from '../../assets/header/ecv-logo.png';
 import { PiEngineFill, PiSpeedometerFill } from "react-icons/pi";
 import { IoPricetags } from "react-icons/io5";
+import { FaBolt } from "react-icons/fa6";
 import ItemCount from '../Button/ItemCount';
 
 export const ItemDetailContainer = () => {
@@ -59,6 +60,10 @@ export const ItemDetailContainer = () => {
                         <div className='flex flex-col text-[0.8rem] md:text-xl md:flex-col items-end gap-5'>
                             <p className='flex justify-center items-center gap-3'>
                                 {item.power}
+                                <span className='p-1 border-2 rounded-full'><FaBolt /></span>
+                            </p>
+                            <p className='flex justify-center items-center gap-3'>
+                                {item.engine}
                                 <span className='p-1 border-2 rounded-full'><PiEngineFill /></span>
                             </p>
                             <p className='flex justify-center items-center gap-3'>

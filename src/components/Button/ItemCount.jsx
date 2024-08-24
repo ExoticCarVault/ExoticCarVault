@@ -21,26 +21,26 @@ function ItemCount({ stock, initial, item }) {
     };
 
     const handleAddToCart = () => {
-        // Adiciona o item completo ao carrinho com a quantidade selecionada
+       
         addToCart({ ...item, quantity: contador });
     };
 
     return (
-        <div className="flex items-center justify-center md:pt-10">
-            <div className="flex justify-around items-center w-[80px] h-6 rounded-md p-1 text-[0.8rem] md:h-10 md:text-xl md:w-[150px]">
-                <button className="p-2 bg-[#b5a47e] hover:bg-[#c7b181] text-[0.6rem] rounded-full md:text-xl" onClick={desincrementar}>
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-5 md:pt-10">
+            <div className="flex justify-around items-center rounded-md md:gap-3 text-[0.6rem] md:text-xl">
+                <button className="p-2 bg-[#b5a47e] hover:bg-[#c7b181] text-[0.3rem] rounded-full md:text-xl" onClick={desincrementar}>
                     <FaMinus />
                 </button>
                 <div className="text-white p-2">
                     {contador}
                 </div>
-                <button className="p-2 bg-[#b5a47e] hover:bg-[#c7b181] text-[0.6rem] rounded-full md:text-xl" onClick={incrementar}>
+                <button className="p-2 bg-[#b5a47e] hover:bg-[#c7b181] text-[0.3rem] rounded-full md:text-xl" onClick={incrementar}>
                     <FaPlus />
                 </button>
             </div>
             <button 
                 onClick={handleAddToCart} 
-                className="flex justify-center items-center w-[60px] h-6 text-[0.6rem] bg-[#b5a47e] hover:bg-[#c7b181] rounded-md p-1 md:h-10 md:text-xl md:w-[150px] cursor-pointer"
+                className="flex justify-center items-center py-2 px-5  text-[0.3rem] bg-[#b5a47e] hover:bg-[#c7b181] rounded-md md:text-xl cursor-pointer"
             >
                 <span>Comprar</span>
             </button>
