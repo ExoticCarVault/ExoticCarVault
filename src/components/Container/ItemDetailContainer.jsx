@@ -1,50 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { items } from '../Data'; 
-import Logo from '../../assets/header/ecv-logo.png';
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../../services/firebase';
 import { PiEngineFill, PiSpeedometerFill } from "react-icons/pi";
 import { IoPricetags } from "react-icons/io5";
 import { FaBolt } from "react-icons/fa6";
 import ItemCount from '../Button/ItemCount';
 
 export const ItemDetailContainer = () => {
-    const { id } = useParams(); // Obtém o id do parâmetro da URL
     const [item, setItem] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [fadeClass, setFadeClass] = useState('opacity-0 scale-95');
+    const { id } = useParams(); // Obtém o ID da URL
 
     useEffect(() => {
-        setTimeout(() => {
-            setFadeClass('opacity-100 scale-100');
-        }, 100);
+        const fetchItem = async () => {
+            try {
+                const itemDoc = doc(db, 'items', id); // Usa o ID para buscar o documento
+                const itemSnapshot = await getDoc(itemDoc);
 
-        const fetchItem = new Promise((resolve) => {
-            setTimeout(() => {
-                const foundItem = items.find(item => item.id === parseInt(id)); // Encontra o item com base no id
-                resolve(foundItem);
-            }, 2000); // Simula um tempo de carregamento
-        });
+                if (itemSnapshot.exists()) {
+                    setItem({ id: itemSnapshot.id, ...itemSnapshot.data() });
+                } else {
+                    console.log('Item não encontrado com ID:', id);
+                }
+            } catch (error) {
+                console.error('Error fetching item:', error);
+            }
+        };
 
-        fetchItem.then((data) => {
-            setFadeClass('opacity-0 scale-95'); // Inicia efeito de fade-out
-            setTimeout(() => {
-                setItem(data);
-                setLoading(false); // Dados carregados
-            }, 500); // Duração do efeito de fade-out
-        });
+        fetchItem();
     }, [id]);
 
     return (
         <div className="relative">
-            {loading ? (
-                <div className="fixed h-[100vh] inset-0 flex flex-col justify-center items-center bg-[#181818] z-50 overflow-auto">
-                    <img 
-                        className={`w-[130px] transition-opacity duration-1000 ease-in-out ${fadeClass}`} 
-                        src={Logo} 
-                        alt="Logo" 
-                    />
-                </div>
-            ) : item ? (
+            {item ? (
                 <div className='relative flex flex-row gap-5 mt-[5.5rem] md:mt-0 mb-10 shadow-xl'>
                     <img src={item.background} alt={item.name} className="w-full object-cover" />
                     <div className='absolute w-full h-full top-0 flex justify-between items-center bg-gradient-to-r from-[#000000e6] to-transparent px-[6%]'>

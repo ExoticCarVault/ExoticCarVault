@@ -1,16 +1,13 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore, collection, addDoc,} from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyClrVId5fRjAKJcCt-shJTe95Nv0Q6Vu3c",
-  authDomain: "aula--64015.firebaseapp.com",
-  projectId: "aula--64015",
-  storageBucket: "aula--64015.appspot.com",
-  messagingSenderId: "302791460899",
-  appId: "1:302791460899:web:008a812649e39c58040996"
+  apiKey: "AIzaSyD4vGrK5mCDM9nU60g2nxroGZZ_1tG0w8o",
+  authDomain: "turma-64015-3576b.firebaseapp.com",
+  projectId: "turma-64015-3576b",
+  storageBucket: "turma-64015-3576b.appspot.com",
+  messagingSenderId: "1042299161046",
+  appId: "1:1042299161046:web:506ca02ca18a424efbfc77"
 };
 
 // Initialize Firebase
@@ -18,3 +15,5 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 export default db;
+
+console.log('firebase')

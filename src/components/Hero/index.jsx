@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { heroData } from '../Data';
+import { heroData } from '../../Data';
 import { HeroBtn } from '../Button/heroBtn';
 import '../../style/index.css'
 

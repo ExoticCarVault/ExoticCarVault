@@ -20,8 +20,17 @@ export default function CartProvider({ children }) {
         });
     }
 
+    function clearCart() {
+        setCart([]); // Limpa todos os itens do carrinho
+    }
+
+    // Função para calcular o total
+    const calculateTotal = () => {
+        return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart }}>
+        <CartContext.Provider value={{ cart, addToCart, clearCart, calculateTotal }}>
             {children}
         </CartContext.Provider>
     );

@@ -5,7 +5,7 @@ const Garage = () => {
             <div className="text-3xl font-bold text-[#b5a47e] flex items-center justify-center mt-28 uppercase">
                 <h1>garagem completa</h1>
             </div>
-            <div>
+            <div className="p-10">
                <ItemListContainer />
             </div>
         </div>
