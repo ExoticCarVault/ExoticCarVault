@@ -25,10 +25,20 @@ export default function CartProvider({ children }) {
     }
 
     // Função para calcular o total
-    const calculateTotal = () => {
-        return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const parseNumber = (value) => {
+        // Verifica se o valor é uma string, caso contrário, converte para string
+        const str = typeof value === 'string' ? value : value.toString();
+        
+        // Remove os pontos e substitui a vírgula por um ponto
+        return parseFloat(str.replace(/\./g, '').replace(',', '.'));
     };
-
+    
+    const calculateTotal = () => {
+        return cart.reduce((total, item) => {
+            const itemTotal = parseNumber(item.price) * parseNumber(item.quantity);
+            return total + itemTotal;
+        }, 0);
+    };
     return (
         <CartContext.Provider value={{ cart, addToCart, clearCart, calculateTotal }}>
             {children}

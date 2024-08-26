@@ -59,7 +59,7 @@ export const ItemDetailContainer = () => {
                                 <span className='p-1 border-2 rounded-full'><PiSpeedometerFill /></span>
                             </p>
                             <p className='flex justify-center items-center gap-3'>
-                                {item.price}
+                                R$ {item.price}
                                 <span className='p-1 border-2 rounded-full'><IoPricetags /></span>
                             </p>
                         </div>
