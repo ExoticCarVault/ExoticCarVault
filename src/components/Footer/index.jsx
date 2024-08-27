@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className='w-full flex flex-col justify-center items-center bg-gradient-to-t from-[#2a2a2a] via-[#2a2a2a] to-[#b5a47e] shadow-2xl'>
             <div className='flex flex-col justify-center items-center p-14'>
             <Link to='/'>
-            <img src={Logo} alt="Logo do site" className='w-[12rem]' />
+            <img src={Logo} alt="Logo do site" className='w-[8rem]' />
             </Link>
             <h1 className='p-2 md:p-5 font-bold text-sm md:text-3xl'> Receba ofertas exclusivas em seu e-mail</h1>
             <p className='text-[12px] md:text-lg'>Inscreva-se em nossa newsletter e fique atualizado</p>

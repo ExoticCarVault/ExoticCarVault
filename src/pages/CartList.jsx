@@ -4,7 +4,7 @@ const CartList = () => {
     const { cart, clearCart, calculateTotal } = useCart();
 
     return (
-        <div>
+        <div className="h-screen">
             <div className="text-3xl font-bold text-[#b5a47e] flex items-center justify-center p-5 mt-28 uppercase">
                 <h1 className="underline underline-offset-8">Lista de Compras</h1>
             </div>
@@ -16,7 +16,7 @@ const CartList = () => {
                         <ul className="flex flex-col items-center justify-center gap-5">
                             {cart.map((item) => (
                                 <li key={item.id} className="flex flex-col md:flex-row w-full p-4 border border-gray-200 rounded-md">
-                                    <img src={item.img} alt={item.name} className="w-[full] h-32 object-cover p-1" />
+                                    <img src={item.img} alt={item.name} className="w-[200px] h-32 object-cover p-1" />
                                     <h2 className="text-xl font-semibold p-3">{item.name}</h2>
                                     <p className="p-3">Modelo: {item.model}</p>
                                     <p className="p-3">Quantidade:<span className="p-2 bg-[#ffffff30] border-2 rounded-sm text-red-500 ml-2">{item.quantity}</span></p>

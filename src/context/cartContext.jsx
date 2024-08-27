@@ -52,4 +52,4 @@ export function useCart() {
         throw new Error('Para usar o useCart seu componente precisa estar dentro do CartProvider');
     }
     return context;
-}
+};
