@@ -5,6 +5,7 @@ import Services from '../pages/Services';
 import OrderDetail from '../pages/OrderDetail';
 import Login from '../pages/Login';
 import CartList from '../pages/CartList';
+import Register from '../pages/Register';
 import { ItemDetailContainer } from '../components/Container/ItemDetailContainer';
 
 const RoutePath = () => {
@@ -17,6 +18,7 @@ const RoutePath = () => {
         <Route path="/login" element={<Login />} />
         <Route path="cartList" element={<CartList />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/register" element={<Register />} />
        </Routes>
     );
 };

@@ -1,6 +1,6 @@
 import { Hero } from "../components/Hero"
 import { Destaques } from "../components/highlights"
-import { ItemListContainer } from "../components/Container/ItemListContaine" 
+import { Exclusive } from "../components/ExclusiveCars" 
 
 
 
@@ -9,7 +9,7 @@ function Home() {
     <div >
      <Hero />
      <Destaques />  
-     <ItemListContainer />  
+     <Exclusive />  
     </div>
   
   )
