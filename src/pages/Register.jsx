@@ -1,10 +1,10 @@
-import { register } from "swiper/element";
+import { Manutencao } from "../components/Manutencao";
 
 
 const Register = () => {
     return(
         <div>
-            <h1> CADASTRO</h1>
+            <Manutencao />
         </div>
     );
 };
